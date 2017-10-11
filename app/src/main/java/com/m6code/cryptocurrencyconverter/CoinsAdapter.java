@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 /**
@@ -54,6 +56,11 @@ public class CoinsAdapter extends ArrayAdapter<Coins> {
         TextView tvToCoin = (TextView)listItemView.findViewById(R.id.tv_to_coin_name);
         // Set the Text for the current coin
         tvToCoin.setText(currentCoin.getToCoinName());
+
+        // Find the rate TextView
+        TextView tvRate = (TextView)listItemView.findViewById(R.id.tv_rate);
+        // Set the text for the rate
+        tvRate.setText(currentCoin.getRate());
 
         // Return the ListView layout
         return listItemView;

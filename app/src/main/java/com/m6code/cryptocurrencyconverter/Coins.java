@@ -13,14 +13,18 @@ public class Coins {
     /** The converting from coin Name */
     private String mFromCoinName;
 
+    /** The conversion rate */
+    private String mRate;
+
     /** The converting to coin Name */
     private String mToCoinName;
 
-    public Coins(int fromCoinImageID, String fromCoinName, String toCoinName){
+    public Coins(int fromCoinImageID, String fromCoinName, String rate, String toCoinName){
 
         mFromCoinImageID = fromCoinImageID;
         mFromCoinName = fromCoinName;
         mToCoinName = toCoinName;
+        mRate = rate;
     }
 
     /**
@@ -45,5 +49,9 @@ public class Coins {
      */
     public String getToCoinName() {
         return mToCoinName;
+    }
+
+    public String getRate() {
+        return mRate;
     }
 }

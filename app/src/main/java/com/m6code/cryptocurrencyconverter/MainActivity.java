@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<Coins> coins = new ArrayList<Coins>();
-        coins.add(new Coins(R.mipmap.ic_launcher, "BTC", "NGR"));
-        coins.add(new Coins(R.mipmap.ic_launcher_round, "ETH", "USD"));
-        coins.add(new Coins(R.mipmap.ic_launcher, "BTC", "USD"));
-        coins.add(new Coins(R.mipmap.ic_launcher_round, "ETH", "NGR"));
-        coins.add(new Coins(R.mipmap.ic_launcher, "BTC", "INR"));
-        coins.add(new Coins(R.mipmap.ic_launcher_round, "ETH", "JPY"));
+        coins.add(new Coins(R.mipmap.ic_launcher, "BTC", "4524", "NGR"));
+        coins.add(new Coins(R.mipmap.ic_launcher_round, "ETH", "453", "USD"));
+        coins.add(new Coins(R.mipmap.ic_launcher, "BTC", "987", "USD"));
+        coins.add(new Coins(R.mipmap.ic_launcher_round, "ETH","768", "NGR"));
+        coins.add(new Coins(R.mipmap.ic_launcher, "BTC", "123", "INR"));
+        coins.add(new Coins(R.mipmap.ic_launcher_round, "ETH", "445", "JPY"));
 
 
         // Find a reference to the {@link ListView} from the activity_main layout
