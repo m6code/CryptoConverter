@@ -14,37 +14,46 @@
 
         <ImageView
             android:id="@+id/coin_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/btc" />
 
         <TextView
-            android:paddingTop="4dp"
             android:id="@+id/tv_from_coin_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/coin_image"
+            android:layout_alignBottom="@id/coin_image"
+            android:layout_centerHorizontal="true"
             android:textSize="40sp"
-            tools:text="BTC"/>
+            tools:text="1 BTC" />
 
 
         <TextView
-            android:paddingTop="8dp"
             android:id="@+id/tv_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/coin_image"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp"
             android:textSize="30sp"
-            tools:text="3456" />
+            tools:text="$3456" />
 
         <TextView
+            android:id="@+id/tv_to_coin_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_to_coin_name"
-            android:paddingTop="8dp"
-            android:textSize="40sp"
             android:layout_below="@id/tv_rate"
-            tools:text="USD"/>
+            android:layout_centerHorizontal="true"
+            android:paddingTop="0dp"
+            android:textSize="40sp"
+            tools:text="USD" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rate"/>
 
     </RelativeLayout>
 

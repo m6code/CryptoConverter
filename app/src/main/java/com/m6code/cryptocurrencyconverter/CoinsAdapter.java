@@ -7,13 +7,18 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Benjamin on 11/10/2017.
@@ -22,7 +27,7 @@ import java.util.ArrayList;
  * based on a data source, which is a list of {@link Coins} objects.
  */
 
-public class CoinsAdapter extends ArrayAdapter<Coins> {
+public class CoinsAdapter extends ArrayAdapter<Coins>  implements OnItemSelectedListener {
 
     public CoinsAdapter(Context context, ArrayList<Coins> coins){
         super(context, 0, coins);
@@ -62,7 +67,45 @@ public class CoinsAdapter extends ArrayAdapter<Coins> {
         // Set the text for the rate
         tvRate.setText(currentCoin.getRate());
 
+        // Find the spinner
+        Spinner spinner = (Spinner) listItemView.findViewById(R.id.spinner);
+
+        // Spinner click listener
+        spinner.setOnItemSelectedListener(this);
+
+        // Spinner Drop down elements
+        List<String> currencies = new ArrayList<String>();
+        currencies.add("USD");
+        currencies.add("EUR");
+        currencies.add("NGN");
+        currencies.add("JPY");
+
+        // Create an array adapter for the spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, currencies);
+
+        // attaching data adapter to spinner
+        try{
+            spinner.setAdapter(dataAdapter);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
         // Return the ListView layout
         return listItemView;
+    }
+
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
+        // On selecting a spinner item
+        String item = parent.getItemAtPosition(position).toString();
+
+        // Showing selected spinner item
+        Toast.makeText(parent.getContext(), "Selected: "+ item, Toast.LENGTH_LONG).show();
+        // TODO: Query the CryptoCompare api here and return the data for each currency
+
+    }
+
+    public void onNothingSelected(AdapterView<?> arg0){
+        // TODO: set default behaviour if nothing is selected
     }
 }
