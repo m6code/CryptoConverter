@@ -1,5 +1,6 @@
 package com.m6code.cryptocurrencyconverter;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.media.Image;
 import android.os.AsyncTask;
@@ -207,6 +208,8 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
     private class OkHttpHandler extends AsyncTask<String, Void, String> {
         OkHttpClient client = new OkHttpClient();
 
+        ProgressDialog progressDialog;
+
         @Override
         protected String doInBackground(String... url) {
             Request.Builder builder = new Request.Builder();
@@ -223,7 +226,20 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
         }
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            //initialized progressDialog
+            progressDialog = new ProgressDialog(getContext());
+            progressDialog.setTitle("Loading");
+            progressDialog.setMessage("Please wait ....");
+            //start progressDialog
+            progressDialog.show();
+        }
+
+        @Override
         protected void onPostExecute(String data) {
+            progressDialog.dismiss();
             super.onPostExecute(data);
 
             try {
