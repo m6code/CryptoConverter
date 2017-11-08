@@ -231,8 +231,8 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
 
             //initialized progressDialog
             progressDialog = new ProgressDialog(getContext());
-            progressDialog.setTitle("Loading");
-            progressDialog.setMessage("Please wait ....");
+            progressDialog.setTitle("Converting");
+            progressDialog.setMessage("Getting conversion rate please wait ....");
             //start progressDialog
             progressDialog.show();
         }
