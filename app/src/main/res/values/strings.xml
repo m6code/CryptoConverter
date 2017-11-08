@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CryptoCurrency Converter</string>
+    <string name="title_activity_eth">EthActivity</string>
 </resources>

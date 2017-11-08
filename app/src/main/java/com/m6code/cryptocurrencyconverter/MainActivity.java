@@ -1,8 +1,10 @@
 package com.m6code.cryptocurrencyconverter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -49,6 +51,15 @@ public class MainActivity extends AppCompatActivity{
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         userListView.setAdapter(adapter);
+
+        FloatingActionButton fab_eth = (FloatingActionButton)findViewById(R.id.fab_eth);
+        fab_eth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ethLaunch = new Intent(MainActivity.this, EthActivity.class);
+                startActivity(ethLaunch);
+            }
+        });
 
 
     }
