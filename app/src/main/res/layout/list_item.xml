@@ -47,7 +47,7 @@
             android:layout_centerHorizontal="true"
             android:dropDownWidth="match_parent"
             android:popupBackground="@android:color/white"
-            android:spinnerMode="dropdown"
+            android:spinnerMode="dialog"
             android:textAlignment="center"
             tools:listitem="@layout/support_simple_spinner_dropdown_item" />
 
