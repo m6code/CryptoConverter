@@ -38,11 +38,7 @@ public class MainActivity extends AppCompatActivity{
         //OkHttpHandler okHttpHandler = new OkHttpHandler();
         //okHttpHandler.execute(COIN_API_URL_MULTI);
 
-        coins.add(new Coins(R.drawable.btc, "1 BTC", "N" , "NGN"));
-
-        coins.add(new Coins(R.drawable.btc, "1 BTC", "N", "NGN"));
-
-        coins.add(new Coins(R.drawable.btc, "1 BTC", "N", "NGN"));
+        coins.add(new Coins(R.drawable.btc, "1 BTC", "N"));
 
         // Find a reference to the {@link ListView} from the activity_main layout
         ListView userListView = (ListView) findViewById(R.id.list);
