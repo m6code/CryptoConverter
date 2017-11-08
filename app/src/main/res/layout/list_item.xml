@@ -41,11 +41,13 @@
 
         <Spinner
             android:id="@+id/spinner"
-            style="@style/spinnerStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_rate"
             android:layout_centerHorizontal="true"
+            android:dropDownWidth="match_parent"
+            android:popupBackground="@android:color/white"
+            android:spinnerMode="dropdown"
             android:textAlignment="center"
             tools:listitem="@layout/support_simple_spinner_dropdown_item" />
 
