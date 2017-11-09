@@ -20,5 +20,6 @@
         android:clickable="true"
         app:fabSize="auto"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         app:srcCompat="@drawable/eth" />
 </RelativeLayout>
