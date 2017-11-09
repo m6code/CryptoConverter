@@ -1,35 +1,21 @@
 package com.m6code.cryptocurrencyconverter;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.Toast;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
-public class MainActivity extends AppCompatActivity{
+public class BtcActivity extends AppCompatActivity{
 
 
     // create the log tag to log errors to console
-    public static final String LOG_TAG = MainActivity.class.getName();
+    public static final String LOG_TAG = BtcActivity.class.getName();
 
     ArrayList<Coins> coins = new ArrayList<Coins>();
 
@@ -48,7 +34,7 @@ public class MainActivity extends AppCompatActivity{
         ListView userListView = (ListView) findViewById(R.id.list);
 
         // Create a new adapter that takes an empty list of users as input
-        CoinsAdapter adapter = new CoinsAdapter(MainActivity.this, coins);
+        CoinsAdapter adapter = new CoinsAdapter(BtcActivity.this, coins);
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
@@ -58,7 +44,7 @@ public class MainActivity extends AppCompatActivity{
         fab_eth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ethLaunch = new Intent(MainActivity.this, EthActivity.class);
+                Intent ethLaunch = new Intent(BtcActivity.this, EthActivity.class);
                 startActivity(ethLaunch);
             }
         });
