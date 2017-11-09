@@ -89,7 +89,6 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
         currencies.add("GBP - British Pound");
         currencies.add("CHF - Swiss Franc");
         currencies.add("CAD - Canadian Dollar");
-
         currencies.add("MXN - Mexican Peso");
         currencies.add("AUD - Australian Dollar");
         currencies.add("HKD - Hong Kong Dollar");
@@ -98,7 +97,6 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
         currencies.add("KRW - Korean Won");
         currencies.add("CHF - Swiss Franc");
         currencies.add("ILS - Israeli New Shekel");
-
         currencies.add("RUB - Russian Ruble");
         currencies.add("ZAR - South African Rand");
         currencies.add("SEK - Swedish Krona");
@@ -180,8 +178,6 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
                 okHttpHandler.execute(queryURL + "RUB");
                 break;
 
-
-
             case "ZAR - South African Rand":
                 okHttpHandler.execute(queryURL + "ZAR");
                 break;
@@ -246,90 +242,90 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
                 JSONObject coinDataObject = new JSONObject(data);
 
                 if (coinDataObject.has("NGN")) {
-                    String btc2NGN = coinDataObject.getString("NGN");
+                    String btcConvert = coinDataObject.getString("NGN");
                     // Update the textView of the list.
-                    tvRate.setText(btc2NGN + " NGN");
+                    tvRate.setText(btcConvert + " NGN");
                 } else if (coinDataObject.has("USD")) {
-                    String btc2USD = coinDataObject.getString("USD");
+                    String btcConvert = coinDataObject.getString("USD");
                     // Update the textView of the list.
-                    tvRate.setText(btc2USD + " USD");
+                    tvRate.setText(btcConvert + " USD");
                 } else if (coinDataObject.has("EUR")) {
-                    String btc2EUR = coinDataObject.getString("EUR");
+                    String btcConvert = coinDataObject.getString("EUR");
                     // Update the textView of the list.
-                    tvRate.setText(btc2EUR + " EUR");
+                    tvRate.setText(btcConvert + " EUR");
                 } else if (coinDataObject.has("JPY")) {
-                    String btc2JPY = coinDataObject.getString("JPY");
+                    String btcConvert = coinDataObject.getString("JPY");
                     // Update the textView of the list.
-                    tvRate.setText(btc2JPY + " JPY");
+                    tvRate.setText(btcConvert + " JPY");
                 } else if (coinDataObject.has("GBP")) {
-                    String btc2GBP = coinDataObject.getString("GBP");
+                    String btcConvert = coinDataObject.getString("GBP");
                     // Update the textView of the list.
-                    tvRate.setText(btc2GBP + " GBP");
+                    tvRate.setText(btcConvert + " GBP");
                 } else if (coinDataObject.has("CHF")) {
-                    String btc2CHF = coinDataObject.getString("CHF");
+                    String btcConvert = coinDataObject.getString("CHF");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CHF + " CHF");
+                    tvRate.setText(btcConvert + " CHF");
                 } else if (coinDataObject.has("CAD")) {
-                    String btc2CAD = coinDataObject.getString("CAD");
+                    String btcConvert = coinDataObject.getString("CAD");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CAD + " CAD");
+                    tvRate.setText(btcConvert + " CAD");
                 }
 
                 else if (coinDataObject.has("MXN")) {
-                    String btc2USD = coinDataObject.getString("MXN");
+                    String btcConvert = coinDataObject.getString("MXN");
                     // Update the textView of the list.
-                    tvRate.setText(btc2USD + " MXN");
+                    tvRate.setText(btcConvert + " MXN");
                 } else if (coinDataObject.has("AUD")) {
-                    String btc2EUR = coinDataObject.getString("AUD");
+                    String btcConvert = coinDataObject.getString("AUD");
                     // Update the textView of the list.
-                    tvRate.setText(btc2EUR + " AUD");
+                    tvRate.setText(btcConvert + " AUD");
                 } else if (coinDataObject.has("HKD")) {
-                    String btc2JPY = coinDataObject.getString("HKD");
+                    String btcConvert = coinDataObject.getString("HKD");
                     // Update the textView of the list.
-                    tvRate.setText(btc2JPY + " HKD");
+                    tvRate.setText(btcConvert + " HKD");
                 } else if (coinDataObject.has("BRL")) {
-                    String btc2GBP = coinDataObject.getString("BRL");
+                    String btcConvert = coinDataObject.getString("BRL");
                     // Update the textView of the list.
-                    tvRate.setText(btc2GBP + " BRL");
+                    tvRate.setText(btcConvert + " BRL");
                 } else if (coinDataObject.has("INR")) {
-                    String btc2CHF = coinDataObject.getString("INR");
+                    String btcConvert = coinDataObject.getString("INR");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CHF + " INR");
+                    tvRate.setText(btcConvert + " INR");
                 } else if (coinDataObject.has("KRW")) {
-                    String btc2CAD = coinDataObject.getString("KRW");
+                    String btcConvert = coinDataObject.getString("KRW");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CAD + " KRW");
+                    tvRate.setText(btcConvert + " KRW");
                 }else if (coinDataObject.has("ILS")) {
-                    String btc2CHF = coinDataObject.getString("ILS");
+                    String btcConvert = coinDataObject.getString("ILS");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CHF + " ILS");
+                    tvRate.setText(btcConvert + " ILS");
                 } else if (coinDataObject.has("RUB")) {
-                    String btc2CAD = coinDataObject.getString("RUB");
+                    String btcConvert = coinDataObject.getString("RUB");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CAD + " RUB");
+                    tvRate.setText(btcConvert + " RUB");
                 }
 
 
                 else if (coinDataObject.has("ZAR")) {
-                    String btc2GBP = coinDataObject.getString("ZAR");
+                    String btcConvert = coinDataObject.getString("ZAR");
                     // Update the textView of the list.
-                    tvRate.setText(btc2GBP + " ZAR");
+                    tvRate.setText(btcConvert + " ZAR");
                 } else if (coinDataObject.has("SEK")) {
-                    String btc2CHF = coinDataObject.getString("SEK");
+                    String btcConvert = coinDataObject.getString("SEK");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CHF + " SEK");
+                    tvRate.setText(btcConvert + " SEK");
                 } else if (coinDataObject.has("PHP")) {
-                    String btc2CAD = coinDataObject.getString("PHP");
+                    String btcConvert = coinDataObject.getString("PHP");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CAD + " PHP");
+                    tvRate.setText(btcConvert + " PHP");
                 }else if (coinDataObject.has("CNY")) {
-                    String btc2CHF = coinDataObject.getString("CNY");
+                    String btcConvert = coinDataObject.getString("CNY");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CHF + " CNY");
+                    tvRate.setText(btcConvert + " CNY");
                 } else if (coinDataObject.has("TRY")) {
-                    String btc2CAD = coinDataObject.getString("TRY");
+                    String btcConvert = coinDataObject.getString("TRY");
                     // Update the textView of the list.
-                    tvRate.setText(btc2CAD + " TRY");
+                    tvRate.setText(btcConvert + " TRY");
                 }
 
                 else {
