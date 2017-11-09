@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BtcActivity"
-            android:label="Bitcoin Rate">
+            android:label="Crypto Converter">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

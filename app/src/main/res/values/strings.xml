@@ -4,4 +4,7 @@
     <string name="convert">Convert</string>
     <string name="view_btc_rate">View BTC Rate</string>
     <string name="view_eth_rate">View ETH Rate</string>
+    <string name="coin_image">Coin Image</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
 </resources>

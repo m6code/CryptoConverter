@@ -109,7 +109,7 @@ public class CoinsAdapter extends ArrayAdapter<Coins> implements OnItemSelectedL
 
         // Create an array adapter for the spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getContext(),
-                android.R.layout.simple_spinner_item, currencies);
+                android.R.layout.simple_spinner_dropdown_item, currencies);
 
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
