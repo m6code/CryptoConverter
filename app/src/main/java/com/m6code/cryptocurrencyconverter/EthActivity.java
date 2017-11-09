@@ -50,11 +50,17 @@ public class EthActivity extends AppCompatActivity {
                 launchBTC();
                 return true;
             case R.id.convert:
-                //TODO: Add the code to launch the convert activity here
+                launchConvert();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    // Launch the Covert Activity
+    private void launchConvert() {
+        Intent launchConvert = new Intent(this, ConvertActivity.class);
+        startActivity(launchConvert);
     }
 
     // Launch The BTC Activity

@@ -25,15 +25,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    // Okio from square
-    compile 'com.squareup.okio:okio:1.13.0'
 
-    // OkHttp from square
-    compile 'com.squareup.okhttp3:okhttp:3.9.0'
-
-    //Picasso from square
-    compile 'com.squareup.picasso:picasso:2.5.2'
-
+    compile 'com.squareup.okio:okio:1.13.0'  // Okio Lib from Square
+    compile 'com.squareup.okhttp3:okhttp:3.9.0' // OkHttp lib from Square
+    compile 'com.squareup.picasso:picasso:2.5.2' // Picasso Lib from Square
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:25.3.1'

@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BtcActivity">
+        <activity
+            android:name=".BtcActivity"
+            android:label="Bitcoin Rate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,13 +22,17 @@
         </activity>
         <activity
             android:name=".EthActivity"
-            android:label="@string/title_activity_eth"
+            android:label="Ethereum Rate"
             android:parentActivityName=".BtcActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.m6code.cryptocurrencyconverter.BtcActivity" />
         </activity>
+        <activity
+            android:name=".ConvertActivity"
+            android:label="Convert"
+            android:parentActivityName=".BtcActivity" />
     </application>
 
 </manifest>
