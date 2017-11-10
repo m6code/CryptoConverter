@@ -11,13 +11,7 @@
     <item
         android:id="@+id/btc_view"
         android:icon="@drawable/btc"
-        app:showAsAction="never"
+        app:showAsAction="ifRoom"
         android:title="@string/view_btc_rate" />
-
-    <item
-        android:id="@+id/eth_view"
-        android:icon="@drawable/eth"
-        app:showAsAction="never"
-        android:title="@string/view_eth_rate" />
 
 </menu>

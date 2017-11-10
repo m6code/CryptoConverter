@@ -274,9 +274,6 @@ public class ConvertActivity extends AppCompatActivity {
             case R.id.btc_view:
                 launchBTC();
                 return true;
-            case R.id.eth_view:
-                launchETH();
-                return true;
             case R.id.convert:
                 Toast.makeText(this, "Already on Convert", Toast.LENGTH_SHORT).show();
                 return true;
@@ -289,12 +286,6 @@ public class ConvertActivity extends AppCompatActivity {
     private void launchBTC() {
         Intent launchConvert = new Intent(this, BtcActivity.class);
         startActivity(launchConvert);
-    }
-
-    // Launch The ETH Activity
-    private void launchETH() {
-        Intent ethLaunch = new Intent(this, EthActivity.class);
-        startActivity(ethLaunch);
     }
 
     private class OkHttpHandler extends AsyncTask<String, Void, String> {

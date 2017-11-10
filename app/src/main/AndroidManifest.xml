@@ -21,15 +21,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EthActivity"
-            android:label="Ethereum Rate"
-            android:parentActivityName=".BtcActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.m6code.cryptocurrencyconverter.BtcActivity" />
-        </activity>
-        <activity
             android:name=".ConvertActivity"
             android:label="Convert"
             android:parentActivityName=".BtcActivity" />

@@ -46,7 +46,7 @@ public class BtcActivity extends AppCompatActivity {
         fab_eth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchETH();
+                launchConvert();
             }
         });
 
@@ -69,9 +69,6 @@ public class BtcActivity extends AppCompatActivity {
             case R.id.btc_view:
                 Toast.makeText(this,"Already on BTC", Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.eth_view:
-                launchETH();
-                return true;
             case R.id.convert:
                 launchConvert();
                 return true;
@@ -85,12 +82,5 @@ public class BtcActivity extends AppCompatActivity {
         Intent launchConvert = new Intent(this, ConvertActivity.class);
         startActivity(launchConvert);
     }
-
-    // Launch The ETH Activity
-    private void launchETH() {
-        Intent ethLaunch = new Intent(this, EthActivity.class);
-        startActivity(ethLaunch);
-    }
-
 
 }

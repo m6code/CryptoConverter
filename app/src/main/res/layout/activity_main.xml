@@ -17,9 +17,9 @@
         android:id="@+id/fab_eth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:clickable="true"
         app:fabSize="auto"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        app:srcCompat="@drawable/eth" />
+        app:srcCompat="@drawable/ic_convert" />
 </RelativeLayout>
