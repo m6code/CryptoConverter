@@ -20,6 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +38,8 @@ public class ConvertActivity extends AppCompatActivity {
 
     // The editTextView
     EditText userInput;
+
+    DecimalFormat decimalFormat = new DecimalFormat("####0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -335,7 +338,7 @@ public class ConvertActivity extends AppCompatActivity {
                         Double input = Double.parseDouble(userInput.getText().toString());
                         Double result = rate * input;
                         // update the coversion text view
-                        tv_Con.setText(result.toString() + " NGN");
+                        tv_Con.setText(decimalFormat.format(result) + " NGN");
                     }else{
                         Toast.makeText(getApplicationContext(),"Enter number to convert", Toast.LENGTH_SHORT).show();
                     }
@@ -347,7 +350,7 @@ public class ConvertActivity extends AppCompatActivity {
                     Double rate = Double.parseDouble(convo);
                     Double input = Double.parseDouble(userInput.getText().toString());
                     Double result = rate * input;
-                    tv_Con.setText(result.toString() + " USD");
+                    tv_Con.setText(decimalFormat.format(result) + " USD");
 
                 }else if (coinDataObject.has("EUR")) {
                     convo = coinDataObject.getString("EUR");
@@ -355,7 +358,7 @@ public class ConvertActivity extends AppCompatActivity {
                     Double rate = Double.parseDouble(convo);
                     Double input = Double.parseDouble(userInput.getText().toString());
                     Double result = rate * input;
-                    tv_Con.setText(result.toString() + " EUR");
+                    tv_Con.setText(decimalFormat.format(result) + " EUR");
 
                 }else if (coinDataObject.has("JPY")) {
                     convo = coinDataObject.getString("JPY");
@@ -363,7 +366,7 @@ public class ConvertActivity extends AppCompatActivity {
                     Double rate = Double.parseDouble(convo);
                     Double input = Double.parseDouble(userInput.getText().toString());
                     Double result = rate * input;
-                    tv_Con.setText(result.toString() + " JPY");
+                    tv_Con.setText(decimalFormat.format(result) + " JPY");
 
                 }else if (coinDataObject.has("GBP")) {
                     convo = coinDataObject.getString("GBP");
@@ -371,10 +374,139 @@ public class ConvertActivity extends AppCompatActivity {
                     Double rate = Double.parseDouble(convo);
                     Double input = Double.parseDouble(userInput.getText().toString());
                     Double result = rate * input;
-                    tv_Con.setText(result.toString() + " GBP");
+                    tv_Con.setText(decimalFormat.format(result) + " GBP");
 
                 }
 
+
+                else if (coinDataObject.has("CHF")) {
+                    convo = coinDataObject.getString("CHF");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " CHF");
+
+                }else if (coinDataObject.has("CAD")) {
+                    convo = coinDataObject.getString("CAD");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " CAD");
+
+                }else if (coinDataObject.has("MXN")) {
+                    convo = coinDataObject.getString("MXN");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " MXN");
+
+                }else if (coinDataObject.has("AUD")) {
+                    convo = coinDataObject.getString("AUD");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " AUD");
+
+                }
+
+
+                else if (coinDataObject.has("HKD")) {
+                    convo = coinDataObject.getString("HKD");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " HKD");
+
+                }else if (coinDataObject.has("BRL")) {
+                    convo = coinDataObject.getString("BRL");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " BRL");
+
+                }else if (coinDataObject.has("INR")) {
+                    convo = coinDataObject.getString("INR");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " INR");
+
+                }else if (coinDataObject.has("KRW")) {
+                    convo = coinDataObject.getString("KRW");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " KRW");
+
+                }
+
+                else if (coinDataObject.has("ILS")) {
+                    convo = coinDataObject.getString("ILS");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " ILS");
+
+                }else if (coinDataObject.has("RUB")) {
+                    convo = coinDataObject.getString("RUB");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " RUB");
+
+                }else if (coinDataObject.has("ZAR")) {
+                    convo = coinDataObject.getString("ZAR");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " ZAR");
+
+                }else if (coinDataObject.has("SEK")) {
+                    convo = coinDataObject.getString("SEK");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " SEK");
+
+                }
+
+                else if (coinDataObject.has("PHP")) {
+                    convo = coinDataObject.getString("PHP");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " PHP");
+
+                }else if (coinDataObject.has("CNY")) {
+                    convo = coinDataObject.getString("CNY");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " CNY");
+
+                }else if (coinDataObject.has("TRY")) {
+                    convo = coinDataObject.getString("TRY");
+
+                    Double rate = Double.parseDouble(convo);
+                    Double input = Double.parseDouble(userInput.getText().toString());
+                    Double result = rate * input;
+                    tv_Con.setText(decimalFormat.format(result) + " TRY");
+
+                }
 
                 else {
                     tv_Con.setText("err");
